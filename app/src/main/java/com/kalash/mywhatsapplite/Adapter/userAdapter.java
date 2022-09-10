@@ -1,0 +1,115 @@
+package com.kalash.mywhatsapplite.Adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.kalash.mywhatsapplite.ChatDetailActivity;
+import com.kalash.mywhatsapplite.R;
+import com.kalash.mywhatsapplite.model.users;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+
+public class userAdapter extends RecyclerView.Adapter<userAdapter.ViewHolder>{
+
+    ArrayList<users> list;
+    Context context;
+
+    public userAdapter(ArrayList<users> list, Context context) {
+        this.list = list;
+        this.context = context;
+    }
+
+    @NonNull
+    @Override
+
+
+
+
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+      View view= LayoutInflater.from(context).inflate(R.layout.sample_show_user,parent,false);
+
+        return new ViewHolder(view);
+    }
+
+    //to upload profile pic
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        users Users=list.get(position);
+        Picasso.get()  .load(Users.getProfilePic()).placeholder(R.drawable.user).into(holder.imageView); // profile pic in chat menu
+
+        // last message shown in mainActivity
+        FirebaseDatabase.getInstance().getReference().child("chats").child(FirebaseAuth.getInstance().getUid()+ Users.getUserId())
+                .orderByChild("timestamp")
+                .limitToLast(1).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.hasChildren())
+                {
+                    for(DataSnapshot snapshot1:snapshot.getChildren())
+                    {
+                        holder.lastMessage.setText(snapshot1.child("message").getValue(String.class));
+                    }
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+        //user name from firebase
+        holder.userName.setText(Users.getUserName());
+
+        //passing user data from chat list menu to ChatDetails class
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, ChatDetailActivity.class);
+                intent.putExtra("userId",Users.getUserId());
+                intent.putExtra("profilePic",Users.getProfilePic());
+                intent.putExtra("userName",Users.getUserName());
+                context.startActivity(intent);
+            }
+        });
+
+        // last message
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView imageView;
+        TextView userName,lastMessage;
+
+
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+            imageView=itemView.findViewById(R.id.profile_image);
+            userName=itemView.findViewById(R.id.userNameList);
+            lastMessage=itemView.findViewById(R.id.lastMessage);
+        }
+    }
+}

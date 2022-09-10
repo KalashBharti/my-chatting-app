@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable-v24/button1.xml" value="0.1375" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable-v24/ic_fb.xml" value="0.1375" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable-v24/ic_google.xml" value="0.1" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable-v24/ic_icon.xml" value="0.1375" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1375" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable/bg_receiver.xml" value="0.224" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable/bg_sender.xml" value="0.224" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable/call.xml" value="0.2245" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable/edittext.xml" value="0.2245" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1375" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable/personaldata.xml" value="0.214" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/drawable/setting_layout__bottom.xml" value="0.214" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_chat_detail.xml" value="0.33648393194706994" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_group_chat.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_personal_and_app_detail.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_proflie_detail.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_setting.xml" value="0.264" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_sing_up.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/activity_splas_screen.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/fragment_calls.xml" value="0.22037037037037038" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/fragment_chat.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/sample_buble.xml" value="0.1" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/sample_group_receiver.xml" value="0.39847715736040606" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/sample_group_sender.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/sample_receiver.xml" value="1.0" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/sample_sender.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/layout/sample_show_user.xml" value="0.1" />
+        <entry key="..\:/Android Studio/MyWhatsappLite/app/src/main/res/menu/menu.xml" value="0.23229166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
